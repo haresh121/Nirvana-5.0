@@ -25,9 +25,13 @@ var nav = false;
 $('.hamb').click(function(event){
     if (!nav) {
         $('.right2').addClass('responsive').show(500);nav=true;
+        $('.hamb i').removeClass('fa-bars');
+        $('.hamb i').addClass('fa-times');
     }
     else{
         $('.right2').removeClass('responsive').hide(500);nav=false;
+        $('.hamb i').addClass('fa-bars');
+        $('.hamb i').removeClass('fa-times');
     }
 });
 var navbar = $("nav");
