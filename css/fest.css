@@ -345,6 +345,9 @@ a{
     #home .contentHome p{
         font-size: 35px;
     }
+    #home{
+        height: 80vh;
+    }
     nav .left button{
         display: inline-block;
         width: 25px;
@@ -363,12 +366,38 @@ a{
         height: auto;
         transition: all 0.5s;
     }
+    nav i{
+        transition:all 0.5s ease;
+    }
     nav .right2 ul li a{
         display: block;
     }
     nav .right2 ul{
         flex-direction: column;
         padding: 0;
+    }
+    nav .hamb{
+        border: none;
+        background: #fff;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*padding: 20px;*/
+        /*height: 100%;*/
+        /*text-align: center;*/
+        /*vertical-align: center;*/
+        /*font-size: 20px;*/
+        /*width: 30px;*/
+        padding: 0;
+    }
+    nav .hamb i{
+        font-size: 28px;
+        margin: 0;
+        padding:10px 15px;
+    }
+    nav .hamb:focus{
+        outline: none;
     }
     .w1{
         flex-direction: column;
@@ -394,12 +423,19 @@ a{
     .lt{
         margin-right: 0;
     }
-    #tech{
-        height: 79vh;
+    #tech, #non-tech{
+        height: auto;
+    }
+    #tech #techeve .item, #non-tech #nontecheve .item{
+        height: 300px;
     }
     #tech, #non-tech{
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 20px;
+    }
+    #tech h1, #non-tech h1{
+        margin-bottom: 20px;
     }
     #sponsors{
         height: auto;
@@ -415,19 +451,19 @@ a{
         align-items: center;
     }
     #gallery #owlCar1{
-        width: 400px;
+        width: 300px;
         margin-right: 0;
         margin-bottom: 10px;
     }
     #gallery #owlCar2{
-        width: 400px;
+        width: 300px;
     }
     #gallery #owlCar4{
-        width: 400px;
+        width: 300px;
         margin-left: 0;
     }
     #gallery #owlCar3{
-        width: 400px;
+        width: 300px;
         margin-bottom: 10px;
     }
 }
