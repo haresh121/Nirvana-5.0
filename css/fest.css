@@ -371,7 +371,7 @@ footer .devs .dev{
 footer .devs .dev h3 span{
     font-size: 8px;
     padding: 3px 5px;
-    border: 0.4px solid black;
+    border: 0.4px solid #fff000;
     /*background: #0f0f0f;*/
     letter-spacing: 1px;
 }
