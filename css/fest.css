@@ -353,7 +353,6 @@ footer .devs{
     align-items: center;
     width: 100%;
     height: auto;
-    flex-wrap: wrap;
     /*margin-top: 20px;*/
 }
 footer .devs .dev{
@@ -551,6 +550,9 @@ footer li a:hover{
     }
     footer{
         height: 500px;
+    }
+    footer .devs{
+        flex-wrap: wrap;
     }
 }
 
