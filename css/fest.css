@@ -12,13 +12,13 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 .magictime{
-    -webkit-animation-duration: 2s;
-    -o-animation-duration: 2s;
-    animation-duration: 2s;
+    /*-webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;*/
+    animation-duration: 3s;
 }
 #home{
 /*    background-color: #894049;*/
-    background-color: #557a95;
+    background-color: black;
     height: 100vh;
 }
 #home .contentHome{
@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6{
 /*    margin-left: 20px;*/
     text-align: center;
 }
-#home .contentHome svg{
-    width: 500px;
+#home .contentHome img{
+    width: 600px;
     /*height: 120px;*/
 }
 /*#home .contentHome h2{
@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 900;
     line-height: 32px;
     letter-spacing: 3px;
+    color: white;
 }
 /*#home i{
     margin: 0;
@@ -153,16 +154,16 @@ nav a{
     font-family: Expressway;
     transition: 0.2s;
 }
-li:hover a{
+nav li:hover a{
     color: black;
-    background: white;
+    background: #49beb7;
 }
 .right2{
     display: none;
 }
 .active{
     color: black;
-    background: white;
+    background: #49beb7;
     /*transition: 0.5s;*/
 }
 #workshops{
@@ -175,10 +176,12 @@ li:hover a{
 }
 #workshops h1{
     text-align: center;
-    font-size: 35px;
-    font-family: Expressway;
+    font-size: 30px;
+    font-family: Montserrat;
     font-weight: 300;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    color: #fff000;
+    text-transform: uppercase;
 }
 #workshops .wshops{
     display: flex;
@@ -219,7 +222,7 @@ li:hover a{
     margin-right: 40px;
 }
 #tech{
-    height: 76vh;
+    height: 79vh;
     background: #116466;
     padding-top: 70px;
 }
@@ -250,7 +253,7 @@ a{
     font-family: Expressway;
 }
 #non-tech{
-    height: 76vh;
+    height: 78vh;
     /*background: linear-gradient(to right, #141e30, #243b55);*/
     background: #112d32;
     padding-top: 70px;
@@ -334,19 +337,98 @@ a{
 #gallery .slideshow1 .item, #gallery .slideshow2 .item{
     height: 200px;
 }
+footer{
+    height: 250px;
+    width: 100vw;
+    background: #202040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: space-around;
+}
+footer .devs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    /*margin-top: 20px;*/
+}
+footer .devs .dev{
+    display: flex;
+    flex-direction: column;
+    /*margin-left: 15px;
+    margin-right: 15px;*/
+    /*background: #000fff;*/
+    justify-content: space-between;
+    align-items: center;
+    /*background: #f0f0f0;*/
+    height: 120px;
+    width: 100%;
+    font-family: Expressway;
+}
+footer .devs .dev h3 span{
+    font-size: 8px;
+    padding: 3px 5px;
+    border: 0.4px solid black;
+    /*background: #0f0f0f;*/
+    letter-spacing: 1px;
+}
+footer h2{
+    font-family: Montserrat;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+footer h3{
+    font-family: Montserrat;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+footer .email{
+    font-size: 20px;
+    color: #cc0cc0;
+}
+footer ul{
+    padding-left: 0;
+    display: flex;
+}
+footer li{
+    padding: 0;
+    /*margin-bottom: 30px;*/
+    margin-right: 10px;
+    margin-left: 10px;
+}
+footer li a{
+    padding: 10px 12px;
+    /*border-radius: 50%;*/
+    /*box-shadow: inset 0px 0px 19px 3px rgba(0,0,0,0.75);*/
+    border: 1px solid white;
+    font-size: 24px;
+    transition: 0.4s;
+}
+footer li a:hover{
+    background: white;
+    color: black;
+}
 @media only screen and (max-width: 998px){
+    body{
+        overflow-x: hidden;
+    }
     .right1{
         display: none;
     }
-    #home .contentHome svg{
+    #home .contentHome img{
         width: 300px;
         /*height: 120px;*/
     }
     #home .contentHome p{
-        font-size: 35px;
+        font-size: 32px;
     }
     #home{
-        height: 80vh;
+        height: 100vh;
     }
     nav .left button{
         display: inline-block;
@@ -364,6 +446,7 @@ a{
     nav{
         flex-direction: column;
         height: auto;
+        width: auto;
         transition: all 0.5s;
     }
     nav i{
@@ -409,8 +492,8 @@ a{
         flex-direction: column-reverse;
     }
     #workshops img{
-        width: 200;
-        height: 100;
+        width: 170;
+        height: 90;
     }
     #workshops .wshops{
         padding: 0;
@@ -465,6 +548,9 @@ a{
     #gallery #owlCar3{
         width: 300px;
         margin-bottom: 10px;
+    }
+    footer{
+        height: 500px;
     }
 }
 
