@@ -6,6 +6,7 @@ VANTA.WAVES({
     // color: '#46344e',
     // color: '#78244c',
     color: "#230338",
+    // color: '#AC3B61',
     shininess: 110.00,
     waveHeight: 30.00,
     waveSpeed: 1.15,
