@@ -156,19 +156,23 @@ nav a{
 }
 nav li:hover a{
     color: black;
-    background: #49beb7;
+    background: #add8e6;
 }
 .right2{
     display: none;
 }
 .active{
     color: black;
-    background: #49beb7;
+    /*background: #49beb7;*/
+    background:#add8e6;
     /*transition: 0.5s;*/
 }
 #workshops{
     /*background: #25274d;*/
-    background: #0f2862;
+    /*background: #0f2862;*/
+    /*background: #123c69;*/
+    background: #29648a;
+    /*background: #a4b3b6;*/
     color: white;
     padding-top: 30px;
     height: auto;
@@ -180,7 +184,8 @@ nav li:hover a{
     font-family: Montserrat;
     font-weight: 300;
     letter-spacing: 3px;
-    color: #fff000;
+    /*color: #fff000;*/
+    color: black;
     text-transform: uppercase;
 }
 #workshops .wshops{
@@ -223,14 +228,18 @@ nav li:hover a{
 }
 #tech{
     height: 79vh;
-    background: #116466;
+    /*background: #116466;*/
+    background: #2e9cca;
+    /*background: #bab2b5;*/
+    /*background: #e98074;*/
     padding-top: 70px;
 }
 #tech h1, #non-tech h1{
     font-family: "Montserrat";
     text-transform: uppercase;
     margin-bottom: 90px;
-    color: #fff000;
+    /*color: #fff000;*/
+    color: black;
     text-align: center;
     font-size: 30px;
     letter-spacing: 4px;
@@ -238,7 +247,7 @@ nav li:hover a{
 }
 #tech .item, #non-tech .item{
     /*margin-top: 50px;*/
-    color: white;
+    color: black;
     background: black;
     /*z-index: 99;*/
     /*width: 300px;*/
@@ -246,6 +255,13 @@ nav li:hover a{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("https://picsum.photos/id/866/500/200");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tech .item a, #non-tech .item a{
+    color: black;
 }
 a{
     color: white;
@@ -255,12 +271,15 @@ a{
 #non-tech{
     height: 78vh;
     /*background: linear-gradient(to right, #141e30, #243b55);*/
-    background: #112d32;
+    /*background: #112d32;*/
+    background: #aaabb8;
+    /*background: #eee2dc;*/
     padding-top: 70px;
 }
 #sponsors{
     height: 79vh;
-    background: #19181a;
+    /*background: #19181a;*/
+    background: #464866;
     padding-top: 70px;
 }
 #sponsors h1{
@@ -294,7 +313,8 @@ a{
 #gallery{
     padding-top: 70px;
     height: auto;
-    background: #101010;
+    /*background: #101010;*/
+    background: #25274d;
     padding-bottom: 30px;
 }
 #gallery h1{
@@ -372,8 +392,10 @@ footer .devs .dev h3 span{
     font-size: 8px;
     padding: 3px 5px;
     border: 0.4px solid #fff000;
-    /*background: #0f0f0f;*/
+    background: #0f0f0f;
     letter-spacing: 1px;
+    margin-left: 5px;
+    /*margin-top: -60px;*/
 }
 footer h2{
     font-family: Montserrat;
@@ -385,6 +407,8 @@ footer h3{
     font-size: 20px;
     letter-spacing: 3px;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 footer .email{
     font-size: 20px;
