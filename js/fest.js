@@ -1,4 +1,8 @@
-AOS.init();
+// AOS.init();
+ScrollOut({
+    targets: '.w1, .w2, #owlCar1, #owlCar2, #owlCar3, #owlCar4',
+    threshold: 0.1
+});
 VANTA.WAVES({
     el: '#home',
     // #123C69
@@ -6,11 +10,13 @@ VANTA.WAVES({
     // color: '#46344e',
     // color: '#78244c',
     color: "#230338",
+    // color: '#2F3061',
+    // color: "#542344",
     // color: '#AC3B61',
-    shininess: 110.00,
-    waveHeight: 30.00,
+    shininess: 150.00,
+    waveHeight: 35.00,
     waveSpeed: 1.15,
-    zoom: 0.85
+    zoom: 1.2
 });
 $(document).on('click', 'a[href^="#"]', function(e) {
     var id = $(this).attr('href');
