@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Manjari|Montserrat|Muli&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap'); */
 body{
     margin: 0;
     padding: 0;
@@ -6,20 +6,30 @@ body{
 }
 @font-face{
     font-family: Expressway;
-    src: url("../fonts/expressway rg.ttf");
+    src: url('../fonts/expressway rg.ttf');
+}
+@font-face{
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Medium.otf');
+}
+@font-face{
+    font-family: SegoeUI;
+    src: url('../fonts/SegoeUI.ttf');
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
-.magictime{
-    /*-webkit-animation-duration: 2s;
-    -o-animation-duration: 2s;*/
-    animation-duration: 3s;
+.magictime.vanishIn, .magictime.spaceInDown{
+    animation-duration: 2s;
+}
+span:focus{
+    outline: none;
 }
 #home{
-/*    background-color: #894049;*/
     background-color: black;
     height: 100vh;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 #home .contentHome{
     color: black;
@@ -27,21 +37,13 @@ h1, h2, h3, h4, h5, h6{
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-/*    margin-left: 20px;*/
     text-align: center;
 }
 #home .contentHome img{
     width: 600px;
-    /*height: 120px;*/
 }
-/*#home .contentHome h2{
-    font-family: Expressway;
-    font-size: 38px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}*/
 #home .contentHome p{
-    font-family: Expressway;
+    font-family: Poppins;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 900;
@@ -49,40 +51,28 @@ h1, h2, h3, h4, h5, h6{
     letter-spacing: 3px;
     color: white;
 }
-/*#home i{
-    margin: 0;
-    padding: 5px;
-/*    border: 1px solid black;
-}*/
-/*#home i:hover{
-    transform: translateY(10px);
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;
-}*/
 @keyframes ico-down{
     0%{
         /*opacity: 0;*/
         bottom: 10%;
+        opacity: 0;
     }
     100%{
         /*opacity: 1;*/
         bottom: 5%;
+        opacity: 1;
     }
 }
 #home i{
     position: absolute;
     font-size: 30px;
-    /*bottom: 5%;*/
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
-    /*border-radius: 50%;*/
     padding: 10px;
     animation-name: ico-down;
-    -webkit-animation-direction: normal;
-    -o-animation-direction: normal;
-    animation-direction: normal;
-    animation-duration: 1.2s;
+    animation-direction: forwards;
+    animation-duration: 0.9s;
     -webkit-animation-fill-mode: both;
     -o-animation-fill-mode: both;
     animation-fill-mode: both;
@@ -91,11 +81,6 @@ h1, h2, h3, h4, h5, h6{
     -o-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     color: #f0f0f0;
-    /*background-color: rgba(255, 255, 255, 0.6);*/
-    /*width: 30px;*/
-}
-#workshops{
-    height: 100vh;
 }
 ::-webkit-scrollbar{
     width: 8px;
@@ -114,13 +99,17 @@ nav{
     /*padding-left: 10px;*/
     /*padding-right: 10px;*/
     z-index: 100;
+    /*padding:0 10px 0 10px;*/
 }
 nav .left{
     /*vertical-align: center;*/
     display: flex;
     align-items: center;
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 30px;
+}
+nav .right1{
+    margin-right: 15px;
 }
 nav .right1 ul{
     display: flex;
@@ -152,11 +141,13 @@ nav a{
     color: white;
     text-decoration: none;
     font-family: Expressway;
+    font-weight: 400;
     transition: 0.2s;
 }
 nav li:hover a{
     color: black;
-    background: #add8e6;
+    /*background: #add8e6;*/
+    background: #fff;
 }
 .right2{
     display: none;
@@ -164,45 +155,72 @@ nav li:hover a{
 .active{
     color: black;
     /*background: #49beb7;*/
-    background:#add8e6;
+    /*background:#add8e6;*/
+    background: #fff;
     /*transition: 0.5s;*/
 }
-#workshops{
-    /*background: #25274d;*/
-    /*background: #0f2862;*/
-    /*background: #123c69;*/
-    background: #29648a;
-    /*background: #a4b3b6;*/
-    color: white;
-    padding-top: 30px;
+section{
+    padding-top: 40px;
+    padding-bottom: 40px;
     height: auto;
-    padding-bottom: 20px;
+    position: relative;
 }
-#workshops h1{
+#workshops{
+    background: #230338;
+    color: white;
+} 
+section h1{
     text-align: center;
-    font-size: 30px;
-    font-family: Montserrat;
-    font-weight: 300;
+    font-size: 36px;
+    font-family: Poppins;
     letter-spacing: 3px;
-    /*color: #fff000;*/
-    color: black;
+    margin-bottom: 60px;
+    color: #fff;
+    /* line-height: 20px; */
     text-transform: uppercase;
 }
 #workshops .wshops{
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    /* margin-top: 70px; */
     padding-left: 100px;
     padding-right: 100px;
     align-content: space-between;
 }
+.w1{
+    transform-origin: left;
+    transform: translateX(-100px); 
+}
+.w2{
+    transform-origin: right;
+    transform: translateX(100px); 
+}
+.w1, .w2{
+    transition: 2s;
+}
+#workshops .wshops .w1[data-scroll="in"]{
+    transform: translateX(0px);
+    opacity: 1;
+}
+#workshops .wshops .w1[data-scroll="out"]{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+#workshops .wshops .w2[data-scroll="in"]{
+    transform: translateX(0px);
+    opacity: 1;
+}
+#workshops .wshops .w2[data-scroll="out"]{
+    transform: translateX(100px);
+    opacity: 0;
+}
 .w .rt h3, .w .lt h3{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 30px;
 }
 .w .rt p, .w .lt p{
-    font-family: 'Muli', sans-serif;
+    font-family: 'SegoeUI', sans-serif;
     text-align: justify;
     margin-top: 50px;
     line-height: 25px;
@@ -218,6 +236,7 @@ nav li:hover a{
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    justify-content: space-between;
     margin-left: 40px;
 }
 .lt{
@@ -227,30 +246,11 @@ nav li:hover a{
     margin-right: 40px;
 }
 #tech{
-    height: 79vh;
-    /*background: #116466;*/
-    background: #2e9cca;
-    /*background: #bab2b5;*/
-    /*background: #e98074;*/
-    padding-top: 70px;
-}
-#tech h1, #non-tech h1{
-    font-family: "Montserrat";
-    text-transform: uppercase;
-    margin-bottom: 90px;
-    /*color: #fff000;*/
-    color: black;
-    text-align: center;
-    font-size: 30px;
-    letter-spacing: 4px;
-    font-weight: 300;
+    background: #302b63;
 }
 #tech .item, #non-tech .item{
-    /*margin-top: 50px;*/
     color: black;
     background: black;
-    /*z-index: 99;*/
-    /*width: 300px;*/
     height: 200px;
     display: flex;
     justify-content: center;
@@ -269,27 +269,10 @@ a{
     font-family: Expressway;
 }
 #non-tech{
-    height: 78vh;
-    /*background: linear-gradient(to right, #141e30, #243b55);*/
-    /*background: #112d32;*/
-    background: #aaabb8;
-    /*background: #eee2dc;*/
-    padding-top: 70px;
+    background: #230338;
 }
 #sponsors{
-    height: 79vh;
-    /*background: #19181a;*/
-    background: #464866;
-    padding-top: 70px;
-}
-#sponsors h1{
-    text-align: center;
-    color: #fff000;
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    font-weight: 200;
-    letter-spacing: 4px;
-    margin-bottom: 80px;
+    background: #302b63;
 }
 #sponsors .sponsorLogos{
     display: -webkit-flex;
@@ -299,7 +282,6 @@ a{
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    /*height: 0%;*/
 }
 #sponsors .sponsorLogos .logos4{
     display: -webkit-flex;
@@ -311,30 +293,12 @@ a{
     align-content: space-between;
 }
 #gallery{
-    padding-top: 70px;
-    height: auto;
-    /*background: #101010;*/
-    background: #25274d;
-    padding-bottom: 30px;
-}
-#gallery h1{
-    text-align: center;
-    color: #fff000;
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    font-weight: 200;
-    letter-spacing: 4px;
-    margin-bottom: 70px;
+    background: #230338;
 }
 #gallery .slideshow1{
-    /*width: 400px;*/
-    /*height: 10px;*/
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    /*background: white;*/
-    /*color: white;*/
-    /*height: 50px;*/
 }
 #gallery .slideshow2{
     display: flex;
@@ -343,16 +307,47 @@ a{
 #gallery #owlCar1{
     width: 400px;
     margin-right: 10px;
+    transition: 1s;
+    transform: scale(0.5);
+    opacity: 0;
 }
 #gallery #owlCar2{
     width: 300px;
+    transition: 1s;
+    opacity: 0;
+    transform: scale(0.5);
+    transition-delay: 0.5s;
 }
 #gallery #owlCar4{
     width: 400px;
     margin-left: 10px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 1s;
+    transition-delay: 1.5s;
 }
 #gallery #owlCar3{
     width: 300px;
+    transition: 1s;
+    opacity: 0;
+    transform: scale(0.5);
+    transition-delay: 1s;
+}
+#gallery #owlCar1[data-scroll="in"]{
+    transform: scale(1);
+    opacity: 1;
+}
+#gallery #owlCar2[data-scroll="in"]{
+    transform: scale(1);
+    opacity: 1;
+}
+#gallery #owlCar3[data-scroll="in"]{
+    transform: scale(1);
+    opacity: 1;
+}
+#gallery #owlCar4[data-scroll="in"]{
+    transform: scale(1);
+    opacity: 1;
 }
 #gallery .slideshow1 .item, #gallery .slideshow2 .item{
     height: 200px;
@@ -360,7 +355,7 @@ a{
 footer{
     height: 250px;
     width: 100vw;
-    background: #202040;
+    background: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,17 +368,12 @@ footer .devs{
     align-items: center;
     width: 100%;
     height: auto;
-    /*margin-top: 20px;*/
 }
 footer .devs .dev{
     display: flex;
     flex-direction: column;
-    /*margin-left: 15px;
-    margin-right: 15px;*/
-    /*background: #000fff;*/
     justify-content: space-between;
     align-items: center;
-    /*background: #f0f0f0;*/
     height: 120px;
     width: 100%;
     font-family: Expressway;
@@ -395,24 +385,39 @@ footer .devs .dev h3 span{
     background: #0f0f0f;
     letter-spacing: 1px;
     margin-left: 5px;
-    /*margin-top: -60px;*/
+    animation-name: animate;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%{
+        box-shadow: 0px 0px 0px 0px #555;
+    }
+    100%{
+        box-shadow: 0px 0px 15px 0px #555;
+    }
 }
 footer h2{
-    font-family: Montserrat;
+    font-family: Expressway;
     font-size: 22px;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 footer h3{
-    font-family: Montserrat;
+    font-family: SegoeUI;
     font-size: 20px;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: flex;
     align-items: center;
 }
-footer .email{
-    font-size: 20px;
-    color: #cc0cc0;
+footer .mail{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
 }
 footer ul{
     padding-left: 0;
@@ -420,14 +425,11 @@ footer ul{
 }
 footer li{
     padding: 0;
-    /*margin-bottom: 30px;*/
     margin-right: 10px;
     margin-left: 10px;
 }
 footer li a{
     padding: 10px 12px;
-    /*border-radius: 50%;*/
-    /*box-shadow: inset 0px 0px 19px 3px rgba(0,0,0,0.75);*/
     border: 1px solid white;
     font-size: 24px;
     transition: 0.4s;
@@ -439,6 +441,16 @@ footer li a:hover{
 @media only screen and (max-width: 998px){
     body{
         overflow-x: hidden;
+    }
+    section h1{
+        font-size: 30px;
+    }
+    #workshops h3{
+        font-size: 25px;
+    }
+    #workshops p{
+        margin-top: 10px;
+        font-size: 18px;
     }
     .right1{
         display: none;
@@ -489,12 +501,6 @@ footer li a:hover{
         display: flex;
         align-items: center;
         justify-content: center;
-        /*padding: 20px;*/
-        /*height: 100%;*/
-        /*text-align: center;*/
-        /*vertical-align: center;*/
-        /*font-size: 20px;*/
-        /*width: 30px;*/
         padding: 0;
     }
     nav .hamb i{
@@ -508,18 +514,25 @@ footer li a:hover{
     .w1{
         flex-direction: column;
     }
-    #workshops{
-        padding-bottom: 0;
+    section h1{
+        margin-bottom: 20px;
     }
+    /* #workshops{
+        padding-bottom: 0;
+    } */
     #workshops .wshops .w.w2{
         flex-direction: column-reverse;
     }
     #workshops img{
-        width: 170;
+        /* width: 120; */
         height: 90;
     }
     #workshops .wshops{
         padding: 0;
+    }
+    .w{
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .rt, .lt{
         margin-left: 0;
@@ -540,15 +553,18 @@ footer li a:hover{
         padding-right: 20px;
         padding-top: 20px;
     }
-    #tech h1, #non-tech h1{
-        margin-bottom: 20px;
-    }
     #sponsors{
         height: auto;
         padding-bottom: 30px;
     }
     #sponsors .sponsorLogos .logos4{
         flex-wrap: wrap;
+    }
+    .logos4{
+        margin-bottom: 0;
+    }
+    #sponsors .sponsorLogos img:nth-child(3n+1){
+        margin-bottom: 30px;
     }
     #gallery .slideshow1, #gallery .slideshow2{
         display: flex;
